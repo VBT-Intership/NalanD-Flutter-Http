@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:html_albums_example/http_albums/view/http_albums.dart';
+import 'package:html_books_example/http_books/view/http_books.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: HttpAlbums(),
+      home: HttpBooks(),
     );
   }
 }
