@@ -9,10 +9,6 @@ class HttpBooksView extends HttpBooksViewModel {
     return Scaffold(
       appBar: buildAppBar(context),
       body: buildFutureBuilder(),
-      // body: ListView.builder(
-      //     padding: EdgeInsets.all(5),
-      //     itemCount: httpBooks.length,
-      //     itemBuilder: (context, index) => buildCardHttp(httpBooks[index])),
     );
   }
 
@@ -43,7 +39,6 @@ class HttpBooksView extends HttpBooksViewModel {
 
   ListView buildListViewHttp(List<HttpBookModel> httpBooks) {
     return ListView.builder(
-      // padding: EdgeInsets.all(5),
       itemCount: httpBooks.length,
       itemBuilder: (context, index) => buildCardHttp(httpBooks[index]),
     );
@@ -51,6 +46,7 @@ class HttpBooksView extends HttpBooksViewModel {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.orange[400],
       title: buildTextAppBar(),
       leading: buildPaddingProgress,
     );
@@ -75,7 +71,7 @@ class HttpBooksView extends HttpBooksViewModel {
               width: 2,
               color: Colors.black12,
             ),
-            borderRadius: BorderRadius.all(Radius.circular(30))),
+            borderRadius: BorderRadius.all(Radius.circular(20))),
         child: ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(30)),
             child: Image.network(book.image)));
